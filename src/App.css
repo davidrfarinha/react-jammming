@@ -1,0 +1,247 @@
+/*#B3B3B3
+*/
+
+.App {
+    width: 100%;
+}
+
+nav {
+    width: 100%;
+    height: 10vh;
+    background-color: #000934;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+h1 {
+    margin: 0;
+    width: 100%;
+    text-align: center;
+    color: whitesmoke;
+    font-family: "Saira", sans-serif;
+    font-style: italic;
+    font-weight: 700;
+    font-size: 2rem;
+    display: block;
+}
+
+h1 span {
+    color: #5a34e0;
+}
+
+.loginLink {
+    width: 32px;
+    height: 32px;
+    color: white;
+    font-family: "Open Sans", serif;
+    font-size: 1rem;
+    margin-right: 16px;
+    background-image: url('data:image/svg+xml,<svg width="64px" height="64px" viewBox="-2.4 -2.4 28.80 28.80" fill="none" xmlns="http://www.w3.org/2000/svg" transform="rotate(0)"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path d="M2.00098 11.999L16.001 11.999M16.001 11.999L12.501 8.99902M16.001 11.999L12.501 14.999" stroke="%235a34e0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M9.00195 7C9.01406 4.82497 9.11051 3.64706 9.87889 2.87868C10.7576 2 12.1718 2 15.0002 2L16.0002 2C18.8286 2 20.2429 2 21.1215 2.87868C22.0002 3.75736 22.0002 5.17157 22.0002 8L22.0002 16C22.0002 18.8284 22.0002 20.2426 21.1215 21.1213C20.2429 22 18.8286 22 16.0002 22H15.0002C12.1718 22 10.7576 22 9.87889 21.1213C9.11051 20.3529 9.01406 19.175 9.00195 17" stroke="%235a34e0" stroke-width="1.5" stroke-linecap="round"></path></g></svg>');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.loginLink:hover {
+    background-image: url('data:image/svg+xml,<svg width="64px" height="64px" viewBox="-2.4 -2.4 28.80 28.80" fill="none" xmlns="http://www.w3.org/2000/svg" transform="rotate(0)"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path d="M2.00098 11.999L16.001 11.999M16.001 11.999L12.501 8.99902M16.001 11.999L12.501 14.999" stroke="%23fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M9.00195 7C9.01406 4.82497 9.11051 3.64706 9.87889 2.87868C10.7576 2 12.1718 2 15.0002 2L16.0002 2C18.8286 2 20.2429 2 21.1215 2.87868C22.0002 3.75736 22.0002 5.17157 22.0002 8L22.0002 16C22.0002 18.8284 22.0002 20.2426 21.1215 21.1213C20.2429 22 18.8286 22 16.0002 22H15.0002C12.1718 22 10.7576 22 9.87889 21.1213C9.11051 20.3529 9.01406 19.175 9.00195 17" stroke="%23fff" stroke-width="1.5" stroke-linecap="round"></path></g></svg>');
+}
+
+.Search-bar {
+    font-family: "Saira", sans-serif;
+
+    margin: 20px auto 0;
+}
+
+.Search-bar input {
+    display: block;
+    margin: auto;
+    width: 50%;
+    margin-bottom: 10px;
+}
+.search-input-label {
+    color: white;
+    display: block;
+    text-align: center;
+    margin: auto;
+}
+.Search-bar Span {
+    color: white;
+    text-align: center;
+    display: block;
+    width: 60%;
+    margin: auto;
+}
+
+.blue-button {
+    margin: 5% auto;
+    display: block;
+    width: 60%;
+    background-color: #000934;
+    border: 2px solid #5a34e0;
+    font-family: "Saira", sans-serif;
+    color: white;
+    padding: 5px;
+    border-radius: 25px;
+    cursor: pointer;
+}
+.blue-button:hover {
+    background-color: #5a34e0;
+}
+
+.blue-button:active {
+    color: #000934;
+    background-color: white;
+}
+
+.search-container {
+    width: 50%;
+}
+
+h2 {
+    font-family: "Saira", sans-serif;
+    text-align: center;
+    font-size: 1.5rem;
+    color: white;
+}
+
+.search-results,
+.playlist {
+    background-color: rgba(0, 9, 52, 0.7);
+}
+/*SEARCH RESULTS STYLES*/
+
+.search-results {
+    width: 90%;
+    margin: auto;
+}
+.search-results-list {
+    list-style: none;
+    padding: 10px;
+}
+
+/*PLAYLIST STYLES*/
+.playlist {
+    width: 50%;
+    position: fixed;
+    right: 0;
+    top: 10vh;
+    height: 90vh;
+    overflow-y: hidden;
+}
+
+.playlist:hover {
+    overflow-y: auto;
+}
+.playlist-name {
+    width: 70%;
+    background-color: transparent;
+    border: 2px solid white;
+    border-radius: 5px;
+    padding: 10px;
+    color: white;
+    text-align: center;
+    font-style: italic;
+    display: block;
+    margin: auto;
+}
+
+.playlist-name:focus {
+    border: none
+}
+.playlist-list {
+    list-style: none;
+    padding: 10px;
+}
+
+/* TRACK STYLES */
+.track img {
+    margin-right: 10px;
+    width: 2.5vw;
+    height: 2.5vw;
+}
+
+.track-info {
+    width: 70%;
+}
+.track-name {
+    display: block;
+    color: white;
+}
+
+.track {
+    font-family: "Open Sans", serif;
+    font-size: 0.7rem;
+    color: #b3b3b3;
+    margin-bottom: 10px;
+    padding: 10px;
+    padding-left: 20px;
+    border: 2px solid #5a34e0;
+    border-radius: 25px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.track:hover {
+    background-color: #000934;
+}
+
+.track .track-name {
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.audio {
+    position: absolute;
+    z-index: 1;
+}
+
+
+.noPlayer {
+    display: flex;
+    align-items: center;
+    justify-content:center ;
+    padding: 0 20px;
+    margin-left: auto;
+    background-color: white;
+    border-radius: 20px;
+}
+.no-audio-player p {
+    width: 90%;
+    color: black;
+    font-size: 0.7rem;
+    font-weight: 500;
+}
+
+.playback-button {
+    width: 24px;
+    height: 24px;
+    margin-left: auto;
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+    background-image: url('data:image/svg+xml,<svg width="24px" height="24px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke="%235a34e0" stroke-width="2"></path><path d="M10.9 8.8L10.6577 8.66152C10.1418 8.36676 9.5 8.73922 9.5 9.33333L9.5 14.6667C9.5 15.2608 10.1418 15.6332 10.6577 15.3385L10.9 15.2L15.1 12.8C15.719 12.4463 15.719 11.5537 15.1 11.2L10.9 8.8Z" stroke="%235a34e0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>');
+}
+
+.tracklist-button {
+    width: 24px;
+    height: 24px;
+    margin-left: auto;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.tracklist-button.add {
+    background-image: url('data:image/svg+xml,<svg fill="%235a34e0" width="24px" height="24px" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><g id="add"><g><path d="M4.743,2.496C4.266,2.223,4,2.45,4,3v26c0,0.55,0.266,0.776,0.743,0.504l22.701-13.008c0.478-0.273,0.509-0.719,0.031-0.992L4.743,2.496z"/><path d="M4.385,30.619L4.385,30.619C3.718,30.619,3,30.112,3,29V3c0-1.113,0.718-1.62,1.385-1.62c0.28,0,0.567,0.083,0.854,0.248l22.733,13.008c0.538,0.308,0.846,0.798,0.846,1.347c0,0.559-0.32,1.063-0.878,1.382L5.24,30.371C4.952,30.536,4.665,30.619,4.385,30.619z M5.003,3.797L5,28.203l21.314-12.212L5.003,3.797z"/></g><g><line x1="28" x2="20" y1="26" y2="26"/><path d="M28,27h-8c-0.552,0-1-0.447-1-1s0.448-1,1-1h8c0.552,0,1,0.447,1,1S28.552,27,28,27z"/></g><g><line x1="24" x2="24" y1="22" y2="30"/><path d="M24,31c-0.552,0-1-0.447-1-1v-8c0-0.553,0.448-1,1-1s1,0.447,1,1v8C25,30.553,24.552,31,24,31z"/></g></g></svg>');
+}
+
+.tracklist-button.add:hover {
+    background-image: url('data:image/svg+xml,<svg fill="%23FFFFFF" width="24px" height="24px" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><g id="add"><g><path d="M4.743,2.496C4.266,2.223,4,2.45,4,3v26c0,0.55,0.266,0.776,0.743,0.504l22.701-13.008c0.478-0.273,0.509-0.719,0.031-0.992L4.743,2.496z"/><path d="M4.385,30.619L4.385,30.619C3.718,30.619,3,30.112,3,29V3c0-1.113,0.718-1.62,1.385-1.62c0.28,0,0.567,0.083,0.854,0.248l22.733,13.008c0.538,0.308,0.846,0.798,0.846,1.347c0,0.559-0.32,1.063-0.878,1.382L5.24,30.371C4.952,30.536,4.665,30.619,4.385,30.619z M5.003,3.797L5,28.203l21.314-12.212L5.003,3.797z"/></g><g><line x1="28" x2="20" y1="26" y2="26"/><path d="M28,27h-8c-0.552,0-1-0.447-1-1s0.448-1,1-1h8c0.552,0,1,0.447,1,1S28.552,27,28,27z"/></g><g><line x1="24" x2="24" y1="22" y2="30"/><path d="M24,31c-0.552,0-1-0.447-1-1v-8c0-0.553,0.448-1,1-1s1,0.447,1,1v8C25,30.553,24.552,31,24,31z"/></g></g></svg>');
+}
+
+.tracklist-button.remove {
+    background-image: url('data:image/svg+xml,<svg fill="%235a34e0" width="24px" height="24px" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><g id="remove"><g><path d="M4.743,2.496C4.266,2.223,4,2.45,4,3v26c0,0.55,0.266,0.776,0.743,0.504l22.701-13.008c0.478-0.273,0.509-0.719,0.031-0.992L4.743,2.496z" /><path d="M4.385,30.619L4.385,30.619C3.718,30.619,3,30.112,3,29V3c0-1.113,0.718-1.62,1.385-1.62c0.28,0,0.567,0.083,0.854,0.248l22.733,13.008c0.538,0.308,0.846,0.798,0.846,1.347c0,0.559-0.32,1.063-0.878,1.382L5.24,30.371C4.952,30.536,4.665,30.619,4.385,30.619z M5.003,3.797L5,28.203l21.314-12.212L5.003,3.797z" /></g><g><path d="M28,27h-8c-0.552,0-1-0.447-1-1s0.448-1,1-1h8c0.552,0,1,0.447,1,1S28.552,27,28,27z" stroke="%235a34e0" stroke-width="2"/></g></g></svg>');
+}
+
+.tracklist-button.remove:hover {
+    background-image: url('data:image/svg+xml,<svg fill="%23fff" width="24px" height="24px" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><g id="remove"><g><path d="M4.743,2.496C4.266,2.223,4,2.45,4,3v26c0,0.55,0.266,0.776,0.743,0.504l22.701-13.008c0.478-0.273,0.509-0.719,0.031-0.992L4.743,2.496z" /><path d="M4.385,30.619L4.385,30.619C3.718,30.619,3,30.112,3,29V3c0-1.113,0.718-1.62,1.385-1.62c0.28,0,0.567,0.083,0.854,0.248l22.733,13.008c0.538,0.308,0.846,0.798,0.846,1.347c0,0.559-0.32,1.063-0.878,1.382L5.24,30.371C4.952,30.536,4.665,30.619,4.385,30.619z M5.003,3.797L5,28.203l21.314-12.212L5.003,3.797z" /></g><g><path d="M28,27h-8c-0.552,0-1-0.447-1-1s0.448-1,1-1h8c0.552,0,1,0.447,1,1S28.552,27,28,27z" stroke="%23fff" stroke-width="2"/></g></g></svg>');
+}
