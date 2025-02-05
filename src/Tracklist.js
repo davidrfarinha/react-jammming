@@ -3,6 +3,7 @@ import Track from "./Track";
 
 export default function Tracklist(props) {
     const { trackListArray, handlePlaylistButton, cssClass, type } = props;
+    console.log(trackListArray);
     const playlistArray = trackListArray.map((item) => {
         const { uri, name, preview_url } = item;
         const artist = item.artists[0].name;

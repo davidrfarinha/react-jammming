@@ -133,17 +133,13 @@ function App() {
                     title="Login to Spotify account"
                 ></a>
             </nav>
-
-
             <div className="search-container">
-
             {token !== undefined && (
                 <SearchBar
                     handleSearchResults={handleSearchResults}
                     token={token}
                 />
             )}
-
                 {searchResultsState.length > 0 && (
                     <>
                         <SearchResults

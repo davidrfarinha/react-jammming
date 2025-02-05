@@ -45,7 +45,7 @@ async function searchTracks(token, searchKeyword, searchLimit) {
         }
         const searchResults = await response.json();
         const arrayTracks = searchResults.tracks.items;
-        // console.log(arrayTracks);
+        console.log(arrayTracks);
         // arrayTracks.forEach(track => {
         //     console.log(`Track Name: ${track.name} - Artist: ${track.artists[0].name} - Album: ${track.album.name} - uri code: ${track.uri}`)
         // });

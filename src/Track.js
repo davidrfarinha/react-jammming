@@ -1,6 +1,6 @@
-import React from "react";
-import { useState } from "react";
+import React, { useState } from "react";
 export default function Track({ uri, imageURL, name, artist, album, preview_url, type, handlePlaylistButton }) {
+    console.log(preview_url)
     const buttonSetup = {
         class: type === "searchResults" ? "add" : "remove",
         title: type === "searchResults" ? "Add to playlist" : "Remove from Playlist",
