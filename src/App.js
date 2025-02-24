@@ -108,7 +108,7 @@ function App() {
         response_type: "token",
         client_id: clientID,
         scope: scope,
-        redirect_uri: "https://jammm-your-playlist.netlify.app/",
+        redirect_uri: "https://jammming-create-spotify-playlists.netlify.app/",
         state: state,
         show_dialog: true,
     });
