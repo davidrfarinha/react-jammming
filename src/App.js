@@ -95,24 +95,30 @@ function App() {
     }
 
     // URL that redirects user to Spotify login page
+    const generateRandomString = (length) => {
+        const possible = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+        const values = crypto.getRandomValues(new Uint8Array(length));
+        return values.reduce((acc, x) => acc + possible[x % possible.length], "");
+    }
     const url = new URL("https://accounts.spotify.com/authorize");
-    const clientID = "eef577326c8e4140a0b4ab84140dfce9";
+    const state = generateRandomString(16);
+    const clientID = process.env.REACT_APP_CLIENT_ID;
     const scope = "user-read-private user-read-email playlist-modify-private playlist-modify-public";
     const parameters = new URLSearchParams({
-        client_id: clientID,
         response_type: "token",
-        redirect_uri: "https://jammm-your-playlist.netlify.app/",
+        client_id: clientID,
         scope: scope,
+        redirect_uri: "https://jammm-your-playlist.netlify.app/",
+        state: state,
         show_dialog: true,
     });
     url.search = parameters;
 
-    // Checking if user token is available in page url and if yes, retrieving user id
+
     useEffect(() => {
         const windowURL = new URL(window.location);
         const parametersFromURL = new URLSearchParams(windowURL.hash);
         const userToken = parametersFromURL.get("#access_token");
-
         if (userToken) {
             setUserTokenState(userToken);
             getUserProfile(userToken).then((response) => {

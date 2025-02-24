@@ -1,4 +1,5 @@
 async function getSpotifyToken() {
+    console.log("Token fetched!")
     const clientID = process.env.REACT_APP_CLIENT_ID;
     const clientSecret = process.env.REACT_APP_CLIENT_SECRET;
     const url = "https://accounts.spotify.com/api/token";
@@ -21,6 +22,7 @@ async function getSpotifyToken() {
         console.error(error);
     }
 }
+
 
 async function searchTracks(token, searchKeyword, searchLimit) {
     const url = new URL("https://api.spotify.com/v1/search");
@@ -101,8 +103,7 @@ async function createPlaylist(userID, userToken, playlistName) {
 }
 
 async function addTracksToPlaylist(arrayOfUris, playlistID, userToken) {
-    const url = new URL(`
-https://api.spotify.com/v1/playlists/${playlistID}/tracks`);
+    const url = new URL(`https://api.spotify.com/v1/playlists/${playlistID}/tracks`);
     const options = {
         method: "POST",
         headers: {
